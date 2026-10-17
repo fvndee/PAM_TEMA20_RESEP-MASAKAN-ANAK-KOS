@@ -42,6 +42,12 @@ fun App() {
                 ) {
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
                     Text("Compose: $greeting")
+                    Text("Halo !!")
+                    Text("Nama Anggota Kelompok 6:")
+                    Text("Hanung Akbar Pramusintho (124140207)")
+                    Text("Rajendra Rifandy (124140099)")
+                    Text("Firman Luthfiansyah (124140044)")
+                    Text("Platform: ${getPlatform().name}")
                 }
             }
         }
