@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.targets.jvm.KotlinJvmTarget
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -55,4 +56,13 @@ kotlin {
 
 dependencies {
     androidRuntimeClasspath(libs.compose.uiTooling)
+}
+
+tasks.register<JavaExec>("runConsole") {
+    group = "application"
+    description = "Runs the console main in jvmMain"
+    mainClass.set("com.example.p2.MainKt")
+    val jvmTarget = kotlin.targets.getByName<KotlinJvmTarget>("jvm")
+    classpath = jvmTarget.compilations.getByName("main").runtimeDependencyFiles + 
+                jvmTarget.compilations.getByName("main").output.allOutputs
 }
