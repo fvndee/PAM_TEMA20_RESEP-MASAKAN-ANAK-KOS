@@ -42,3 +42,7 @@ Mie Rebus Spesial: Disetujui
 Nasi Telur Rice Cooker: Diajukan
 Selesai.
 ```
+
+## Dokumentasi
+
+![Dokumentasi](./gambar.jpeg)
