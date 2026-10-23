@@ -17,11 +17,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "com.example.p1.MainKt"
+        mainClass = "com.example.p3.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.example.p1"
+            packageName = "com.example.p3"
             packageVersion = "1.0.0"
         }
     }
