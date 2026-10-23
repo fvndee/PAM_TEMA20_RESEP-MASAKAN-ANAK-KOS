@@ -7,10 +7,10 @@ data class Resep(
     val bahan: List<String>,
     val langkah: List<String>,
     val waktuMasakMenit: Int,
-    val estimasiBiaya: Int,          // dalam Rupiah
+    val estimasiBiaya: Int,
     val porsi: Int,
-    val alatMasak: String,           // misal: "Rice cooker", "Penggorengan"
+    val alatMasak: String,
     val kategori: KategoriResep,
     val status: StatusResep,
-    val fotoUrl: String? = null      // satu-satunya kolom nullable
+    val fotoUrl: String? = null   // satu-satunya kolom nullable
 )

@@ -1,8 +1,6 @@
 package com.example.p2.data
 
-import com.example.p2.model.KategoriResep
-import com.example.p2.model.Resep
-import com.example.p2.model.StatusResep
+import com.example.p2.model.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 
@@ -12,7 +10,8 @@ interface SumberResep {
 }
 
 class SumberResepPalsu : SumberResep {
-    private val kategori = KategoriResep(1, "Hemat Banget", "Di bawah Rp10.000")
+    private val hemat = KategoriResep(1, "Hemat Banget", "Di bawah Rp10.000")
+    private val tanpaKompor = KategoriResep(2, "Tanpa Kompor", "Cukup rice cooker atau dispenser")
 
     private val data = MutableStateFlow(
         listOf(
@@ -26,9 +25,8 @@ class SumberResepPalsu : SumberResep {
                 estimasiBiaya = 8000,
                 porsi = 1,
                 alatMasak = "Penggorengan",
-                kategori = kategori,
-                status = StatusResep.Diajukan,
-                fotoUrl = null
+                kategori = hemat,
+                status = StatusResep.Diajukan
             ),
             Resep(
                 id = 2,
@@ -40,9 +38,22 @@ class SumberResepPalsu : SumberResep {
                 estimasiBiaya = 6000,
                 porsi = 1,
                 alatMasak = "Panci",
-                kategori = kategori,
+                kategori = hemat,
                 status = StatusResep.Disetujui,
                 fotoUrl = "https://contoh.com/mie.jpg"
+            ),
+            Resep(
+                id = 3,
+                nama = "Nasi Telur Rice Cooker",
+                deskripsi = "Masak nasi dan telur sekaligus",
+                bahan = listOf("Beras", "Telur", "Garam"),
+                langkah = listOf("Masak beras", "Taruh telur di atas nasi saat setengah matang"),
+                waktuMasakMenit = 25,
+                estimasiBiaya = 7000,
+                porsi = 1,
+                alatMasak = "Rice cooker",
+                kategori = tanpaKompor,
+                status = StatusResep.Diajukan
             )
         )
     )
