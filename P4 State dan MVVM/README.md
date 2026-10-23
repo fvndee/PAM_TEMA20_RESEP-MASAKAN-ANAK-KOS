@@ -33,8 +33,6 @@ Aturan yang dijaga ViewModel:
 | Menit, porsi, biaya | Hanya angka dan lebih dari nol |
 | Deskripsi, alat masak | Tidak boleh kosong |
 
-Tombol Simpan hanya aktif kalau semua aturan terpenuhi, dan menekannya dua kali tidak menyimpan dobel karena `sedangMenyimpan` ikut menentukan `bisaSimpan`.
-
 ## Checkpoint minggu 4
 
 | No | Yang diselesaikan | Letak |

@@ -49,8 +49,6 @@ Detail resep
 | `ui/LayarDaftar.kt` | Daftar resep, hanya menerima lambda `bukaDetail` dan `bukaForm` |
 | `ui/LayarAsisten.kt`, `ui/LayarProfil.kt` | Layar tab yang masih sementara |
 
-Layar tidak menerima `NavController`. Layar hanya mengirim event, lalu `App.kt` yang memutuskan pindah ke mana. Detail menerima id, bukan objek resep, jadi saat status diubah lewat tombol Setujui, data di detail dan daftar ikut berubah.
-
 ## Checkpoint minggu 5
 
 | No | Yang diselesaikan | Letak |
